@@ -1,4 +1,6 @@
-import { useState, useEfefect, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
@@ -6,19 +8,31 @@ const Home = () => {
   const [topMovies, setTopMovies] = useState([]);
 
   const getTopRatedMovies = async (url) => {
-    //aqui criei uma variavel chamada  getTopRatedMovies que pega o json
+    const res = await fetch(url);
     const data = await res.json();
-    setTopMovies(data.results); //mostra o data com o json
+    setTopMovies(data.results);
   };
 
-
-
   useEffect(() => {
-    const topRatedUrl =`${moviesURL}top_rated?${apiKey}`;
-  }, []);//aqui uso uma função do react chamda useEffect com outras coisas pra fazer a libveração da api com o link e a senha
+    const topRatedUrl = `${moviesURL}top_rated?${apiKey}`;
+    console.log(topRatedUrl);
+    getTopRatedMovies(topRatedUrl);
+  }, []);
 
+  console.log(topMovies);
 
-  return <div>HOME</div>;
+  return (
+    <div>
+      <h2>Melhores avaliados:</h2>
+      {topMovies.length > 0 &&
+        topMovies.map((movie) => (
+          <div key={movie.id}>
+            <p>{movie.title}</p>
+            <Link to={`/movie/${movie.id}`}>Detalhes</Link>
+          </div>
+        ))}
+    </div>
+  );
 };
 
 export default Home;
