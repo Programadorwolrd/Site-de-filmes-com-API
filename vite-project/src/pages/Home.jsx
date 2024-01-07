@@ -22,15 +22,11 @@ const Home = () => {
   console.log(topMovies);
 
   return (
-    <div>
-      <h2>Melhores avaliados:</h2>
-      {topMovies.length > 0 &&
-        topMovies.map((movie) => (
-          <div key={movie.id}>
-            <p>{movie.title}</p>
-            <Link to={`/movie/${movie.id}`}>Detalhes</Link>
-          </div>
-        ))}
+    <div className="container">
+    <h2 className="title">Melhores filmes:</h2>
+    <div className="movies-container">
+      {topMovies && topMovies.map((movie) => <p>{movie.title}</p>)}
+    </div>
     </div>
   );
 };
