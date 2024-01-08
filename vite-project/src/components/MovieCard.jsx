@@ -1,18 +1,17 @@
-import react from "react-router-dom";
-import { faStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaStar } from "react-icons/fa";
 
-const imageUrl = import.meta.VITE_IMG;
+const imagesURL = import.meta.env.VITE_IMG;
 
-const MovieCard = ({ movie, showLink = true }) => {
+const MovieCard = ({ movie }) => {
   return (
-    <div className="movie-card">
-      <img src={imageUrl + movie.poster_path} alt={MovieCard.title} />
-      <h2>{Movie.title}</h2>
+    <div>
+      <img src={imagesURL + movie.poster_path} alt={movie.title} />
+      <h2>{movie.title}</h2>
       <p>
-        <Fastar /> {movie.vote_average}
+        <FaStar /> {movie.vote_average}
       </p>
-
-    {showLink && <Link to={`/movie/${movie.id}`}>Detalhes</Link>}
+      <Link to={`/movie/${movie.id}`}>Detalhes</Link>
     </div>
   );
 };
