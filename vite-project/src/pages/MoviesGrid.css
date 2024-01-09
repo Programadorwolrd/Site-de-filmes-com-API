@@ -18,10 +18,43 @@
 }
 
 .movies-container div{
-    flex-direction: column;
     width:30%;
-    margin-bottom:2.5rm;
+    margin-bottom:2.5rem;
     display: flex;
     /* pesquisar mais sobre o space-between e sobre melhorias no flex-direction */
     justify-content: space-between; 
+    flex-direction: column;
+    background-color: rgb(20, 20, 20);
+    padding: 1rem;
 }
+
+.movies-container div img{
+    /* fiz isso caso tenha alguma img com tamanho diferente vinda da api */
+    max-width:100%;
+}
+
+.movies-container div img,
+.movies-container div h2,
+.movies-container div p{
+    margin-top: 1rem;
+
+}
+.movies-container div svg{
+    color: yellow;
+}
+
+.movies-container div a  {
+    background-color: #f7d354;
+    border: 2px solid #f7d354;
+    border-radius: 4px;
+    color: #000;
+    padding: 1rem 0.5rem;
+    align-items: center;
+    text-align: center;
+    font-weight:bold ;
+  }
+
+.movies-container div a:hover{
+    background-color: transparent;
+    color: yellow;
+  }

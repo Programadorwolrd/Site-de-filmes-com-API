@@ -31,3 +31,8 @@
     align-items: center;
     cursor: pointer;
   }
+
+  #navbar form button:hover{
+    background-color: transparent;
+    color: yellow;
+  }
