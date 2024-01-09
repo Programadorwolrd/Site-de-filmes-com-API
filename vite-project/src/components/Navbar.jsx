@@ -5,8 +5,8 @@ import { BiCameraMovie, BiSearchAlt2 } from "react-icons/bi";
 import "./NavBar.css";
 
 const Navbar = () => {
-    const [search, setSearch] = useState("");
-    const navigate = useNavigate();
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,7 +16,6 @@ const Navbar = () => {
     navigate(`/search?q=${search}`, { replace: true });
     setSearch("");
   };
-
 
   return (
     <nav id="navbar">
@@ -28,8 +27,10 @@ const Navbar = () => {
           type="text"
           placeholder="Busque um filme"
           onChange={(e) => setSearch(e.target.value)}
-          value={search}
-        />
+          value={search}/>
+        <button type="submit">
+          <BiSearchAlt2 />
+        </button>
       </form>
     </nav>
   );
