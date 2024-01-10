@@ -1,3 +1,47 @@
+
+.banner{
+width:200px ;
+height:200px ;
+}
+
+.buttonplay{
+    position: absolute;
+    margin-top:400px;
+    margin-left:100px;
+    width:230px;
+    height: 50px;
+    background-color: #f7d354;
+    border: 2px solid #f7d354;
+    border-radius: 4px;
+    color: #000;
+    padding: 0.5rem 0.5rem;
+    font-weight:bold ;
+}
+
+.buttonfavorite{
+    position: absolute;
+    margin-top:400px;
+    margin-left:340px;
+    width:150px;
+    height: 50px;
+    background-color: #f7d354;
+    border: 2px solid #f7d354;
+    border-radius: 4px;
+    color: #000;
+    padding: 0.5rem 0.5rem;
+    font-weight:bold ;
+}
+
+.buttonfavorite:hover,
+.buttonplay:hover{
+   
+    transform: scale(1.1); /* Aumenta a escala em 10% */
+    background-color: transparent;
+}
+
+
+
+
 .container .title{
     color: white;
     font-size: 2.5rem;
@@ -24,7 +68,7 @@
     /* pesquisar mais sobre o space-between e sobre melhorias no flex-direction */
     justify-content: space-between; 
     flex-direction: column;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(8, 8, 8);
     padding: 1rem;
 }
 
@@ -34,9 +78,11 @@
 }
 
 .movies-container div img,
-.movies-container div h2,
+.movies-container div
+ h2,
 .movies-container div p{
     margin-top: 1rem;
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
 
 }
 .movies-container div svg{
@@ -44,11 +90,12 @@
 }
 
 .movies-container div a  {
+    height: 40px;
     background-color: #f7d354;
     border: 2px solid #f7d354;
     border-radius: 4px;
     color: #000;
-    padding: 1rem 0.5rem;
+    padding: 0.5rem 0.5rem;
     align-items: center;
     text-align: center;
     font-weight:bold ;
@@ -58,3 +105,9 @@
     background-color: transparent;
     color: yellow;
   }
+
+  .movies-container div img:hover{
+   
+    transform: scale(1.1); /* Aumenta a escala em 10% */
+}
+  
