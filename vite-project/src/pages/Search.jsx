@@ -13,16 +13,33 @@ const Search = () => {
   const [movies, setMovies] = useState([]);
   const query = searchParams.get("q");
 
-  const getSarchedMovies = async (url) => {
+  const getSearchedMovies = async (url) => {
     const res = await fetch(url);
     const data = await res.json();
-    setTopMovies(data.results);
+    setMovies(data.results);
   };
 
   useEffect(() => {
     const searchWithQueryURL = `${searchURL}?${apiKey}&query=${query}`;
-    getSarchedMovies(searchWithQueryURL);
+  
+    const fetchData = async () => {
+      try {
+        const res = await fetch(searchWithQueryURL);
+  
+        if (!res.ok) {
+          throw new Error(`Erro na requisição: ${res.statusText}`);
+        }
+  
+        const data = await res.json();
+        setMovies(data.results);
+      } catch (error) {
+        console.error('Erro ao buscar filmes:', error);
+      }
+    };
+
+    fetchData();
   }, [query]);
+  
 
 
   return (
@@ -31,8 +48,8 @@ const Search = () => {
         Redultados para:<span className="query-text">{query}</span>
       </h2>
       <div className="movies-container">
-        {movies.length === 0 && <p>Carregando...</p>}
-        {movies.length > 0 &&
+        { movies.length === 0 && <p>Carregando...</p>}
+        { movies.length > 0 &&
           movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
       </div>
     </div>

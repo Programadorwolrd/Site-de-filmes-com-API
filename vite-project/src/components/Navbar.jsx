@@ -11,6 +11,7 @@ const Navbar = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(search)
+    
     if (!search) return;
 
     navigate(`/search?q=${search}`, { replace: true });
@@ -21,7 +22,7 @@ const Navbar = () => {
     <nav id="navbar">
       <h2>
         <Link to="/">
-          <BiCameraMovie /> Lypefilmes
+          <BiCameraMovie /> Lellisfilmiz
         </Link>
       </h2>
       <form onSubmit={handleSubmit}>
