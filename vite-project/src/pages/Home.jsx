@@ -26,6 +26,9 @@ const Home = () => {
   return (
     <div className="container">
       <div>
+        <h1 className="filme" >Novissa voadora Filmes Livre</h1>
+        <p className="filme2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium iure assumenda laudantium sed <br />magnam blanditiis debitis quidem, perspiciatis nihil dolorum eos sunt a ex nobis </p>
+
       <button className="buttonplay">Assistir</button>
         <button className="buttonfavorite">Favoritos</button>
         <video width="100%" autoPlay muted loop>
