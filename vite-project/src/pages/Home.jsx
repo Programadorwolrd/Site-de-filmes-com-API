@@ -25,22 +25,30 @@ const Home = () => {
 
   return (
     <div className="container">
-      <div>
-        <h1 className="filme" >Novissa voadora Filmes Livre</h1>
-        <p className="filme2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium iure assumenda laudantium sed <br />magnam blanditiis debitis quidem, perspiciatis nihil dolorum eos sunt a ex nobis </p>
-
-      <button className="buttonplay">Assistir</button>
+      <div className="organizadora">
+        <h1 className="filme">Novissa voadora Filmes</h1>
+        <p className="filme2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          iure assumenda laudantium sed <br />
+          magnam blanditiis debitis quidem, perspiciatis nihil dolorum eos sunt
+          a ex nobis{" "}
+        </p>
+        <button className="buttonplay">Assistir</button>
         <button className="buttonfavorite">Favoritos</button>
-        <video width="100%" autoPlay muted loop>
-          
-          <source src={videoPath} type="video/mp4" />
-          
-        </video>
-        
       </div>
-     
-
+      <video className="video" width="100%" autoPlay muted loop>
+        <source src={videoPath} type="video/mp4" />
+      </video>
       <h2 className="title">Principais filmes:</h2>
+
+{/* aqui esta as categorias */}
+
+
+
+
+
+
+
       <div className="movies-container">
         {topMovies.length === 0 && <p>Carregando...</p>}
         {topMovies.length > 0 &&

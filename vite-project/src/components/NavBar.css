@@ -3,12 +3,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #000000;
+  background-color:transparent;
 }
 
 #navbar h2 a {
+    color:red;
     display: flex;
     align-items: center;
+    margin-left: 8%;
     gap: 0.5rem;
   }
   
@@ -24,8 +26,8 @@
   }
   
   #navbar form button {
-    background-color: #f7d354;
-    border: 2px solid #f7d354;
+    background-color: red;
+    border: 2px solid red;;
     border-radius: 4px;
     color: #000;
     padding: 0.3rem;

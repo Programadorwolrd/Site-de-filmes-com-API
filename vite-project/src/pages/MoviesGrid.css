@@ -1,72 +1,50 @@
-
-.banner{
-width:200px ;
-height:200px ;
-}
-
-
-.filme{
+.organizadora {
+    width: 600px;
+    height: 200px;
     position: absolute;
-    margin-top:300px;
-    margin-left:100px;
-}
-
-.filme2{
-    position: absolute;
-    margin-top:340px;
-    margin-left:100px;
+    margin-top: 24%;
+    margin-left: 8%;
 }
 
 
-.buttonplay{
-    position: absolute;
-    margin-top:400px;
-    margin-left:100px;
-    width:230px;
-    height: 50px;
-    background-color: #fafafa;
-    border: 2px solid #f0f0f0;
-    border-radius: 4px;
-    color: #000;
-    padding: 0.5rem 0.5rem;
-    font-weight:bold ;
-}
-
-.buttonfavorite{
-    position: absolute;
-    margin-top:400px;
-    margin-left:340px;
-    width:150px;
-    height: 50px;
-    background-color: rgba(144, 144, 144, 0.701);
-    border: 2px solid  rgba(144, 144, 144, 0.701);
-    border-radius: 4px;
-    color: #000;
-    padding: 0.5rem 0.5rem;
-    font-weight:bold ;
+.buttonplay {
+    width: 40%;
+    height: 25%;
+    background-color: rgba(255, 255, 255, 0.972);
+    border-radius: 8px;
+    border: none;
+    font-size: medium;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
-button:hover{
-    transform: scale(1.1); /* Aumenta a escala em 10% */
-    background-color: transparent;
+.buttonfavorite {
+    margin: 10px;
+    width: 30%;
+    height: 25%;
+    color: white;
+    background-color: rgba(201, 201, 201, 0.57);
+    border-radius: 8px;
+    border: none;
+    font-size: medium;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
-
-
-.container .title{
+.container .title {
     color: white;
     font-size: 2.5rem;
     text-align: center;
     margin: 2rem 01rem;
 }
 
-.title .query-text{
-    color:yellow;
+.title .query-text {
+    color: yellow;
 }
 
-.movies-container{
+.movies-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -74,35 +52,36 @@ button:hover{
     margin: 0 auto;
 }
 
-.movies-container div{
-    width:30%;
-    margin-bottom:2.5rem;
+.movies-container div {
+    width: 30%;
+    margin-bottom: 2.5rem;
     display: flex;
     /* pesquisar mais sobre o space-between e sobre melhorias no flex-direction */
-    justify-content: space-between; 
+    justify-content: space-between;
     flex-direction: column;
     background-color: rgb(8, 8, 8);
     padding: 1rem;
 }
 
-.movies-container div img{
+.movies-container div img {
     /* fiz isso caso tenha alguma img com tamanho diferente vinda da api */
-    max-width:100%;
+    max-width: 100%;
 }
 
 .movies-container div img,
-.movies-container div
- h2,
-.movies-container div p{
+.movies-container div h2,
+.movies-container div p {
     margin-top: 1rem;
-    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+    transition: transform 0.3s ease-in-out;
+    /* Adiciona uma transição suave */
 
 }
-.movies-container div svg{
+
+.movies-container div svg {
     color: yellow;
 }
 
-.movies-container div a  {
+.movies-container div a {
     height: 40px;
     background-color: #f7d354;
     border: 2px solid #f7d354;
@@ -111,16 +90,64 @@ button:hover{
     padding: 0.5rem 0.5rem;
     align-items: center;
     text-align: center;
-    font-weight:bold ;
-  }
+    font-weight: bold;
+}
 
-.movies-container div a:hover{
+.movies-container div a:hover {
     background-color: transparent;
     color: yellow;
-  }
-
-  .movies-container div img:hover{
-   
-    transform: scale(1.1); /* Aumenta a escala em 10% */
 }
-  
+
+.movies-container div img:hover {
+
+    transform: scale(1.1);
+    /* Aumenta a escala em 10% */
+}
+
+
+
+
+
+
+/* Aqui temos a resposividade para celulares */
+@media only screen and (max-width: 700px) {
+
+    .organizadora {
+        width: 400px;
+        height: 200px;
+        position: absolute;
+        margin-top: 8%;
+        margin-left: 17%;
+    }
+
+    .buttonplay {
+        width: 40%;
+        height: 20%;
+        margin-left: 40px;
+        background-color: rgba(255, 255, 255, 0.972);
+        border-radius: 8px;
+        border: none;
+        font-size: medium;
+        font-weight: bolder;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .buttonfavorite {
+        margin: 10px;
+        width: 30%;
+        height: 20%;
+        color: white;
+        background-color: rgba(201, 201, 201, 0.57);
+        border-radius: 8px;
+        border: none;
+        font-size: medium;
+        font-weight: bolder;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .filme,
+    .filme2 {
+        text-align: center;
+    }
+
+}
