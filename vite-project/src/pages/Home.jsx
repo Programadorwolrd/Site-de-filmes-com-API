@@ -39,15 +39,14 @@ const Home = () => {
       <video className="video" width="100%" autoPlay muted loop>
         <source src={videoPath} type="video/mp4" />
       </video>
-      <h2 className="title">Principais filmes:</h2>
+      <h2 className="title">Categorias:</h2>
 
 {/* aqui esta as categorias */}
-
-
-
-
-
-
+<div className="categorias">
+    <div className="category1">Terror <img src="" alt="" /></div>
+    <div className="category2">Ação</div>
+    <div className="category3">Hisorico</div>
+</div>
 
       <div className="movies-container">
         {topMovies.length === 0 && <p>Carregando...</p>}

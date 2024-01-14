@@ -32,6 +32,50 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.categorias{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category1,
+.category2,
+.category3{
+    width: 30%;
+    height: 280px;
+    background-color: red;
+    border-radius: 8px;
+}
+
+.category1{
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.category2{
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.category3{
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+
+
+
 
 .container .title {
     color: white;
@@ -39,6 +83,7 @@
     text-align: center;
     margin: 2rem 01rem;
 }
+
 
 .title .query-text {
     color: yellow;
@@ -52,8 +97,12 @@
     margin: 0 auto;
 }
 
+
+
 .movies-container div {
     width: 30%;
+    border-radius: 20px;
+    margin:2px;
     margin-bottom: 2.5rem;
     display: flex;
     /* pesquisar mais sobre o space-between e sobre melhorias no flex-direction */
@@ -66,6 +115,7 @@
 .movies-container div img {
     /* fiz isso caso tenha alguma img com tamanho diferente vinda da api */
     max-width: 100%;
+    border-radius: 20px;
 }
 
 .movies-container div img,
