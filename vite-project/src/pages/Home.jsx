@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div className="container">
       <div className="organizadora">
-        <h1 className="filme">Novissa voadora Filmes</h1>
+        <h1 className="filme">Novissa voadora FilmesHD</h1>
         <p className="filme2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
           iure assumenda laudantium sed <br />
@@ -43,10 +43,11 @@ const Home = () => {
 
 {/* aqui esta as categorias */}
 <div className="categorias">
-    <div className="category1">Terror <img src="" alt="" /></div>
-    <div className="category2">Ação</div>
-    <div className="category3">Hisorico</div>
+    <div className="category1"><a href="">Terror</a> </div>
+    <div className="category2"><a href="">Terror</a></div>
+    <div className="category3"><a href="">Terror</a></div>
 </div>
+
 
       <div className="movies-container">
         {topMovies.length === 0 && <p>Carregando...</p>}

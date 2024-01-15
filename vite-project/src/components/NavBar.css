@@ -1,4 +1,6 @@
 #navbar {
+  position: absolute;
+  z-index:1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,16 +22,19 @@
   }
   
   #navbar input {
+    display: flex;
     padding: 0.2rem 0.8rem;
     border-radius: 4px;
-    border: none;
+    padding-left: 60px;
+    margin-left: 150vh;
+    border:none;
   }
   
   #navbar form button {
-    background-color: red;
-    border: 2px solid red;;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);;
     border-radius: 4px;
-    color: #000;
+    color: #ffffff;
     padding: 0.3rem;
     font-size: 1.3rem;
     display: flex;
@@ -38,6 +43,6 @@
   }
 
   #navbar form button:hover{
-    background-color: transparent;
-    color: yellow;
+    background-color: rgba(0, 0, 0, 0.633);
+    color: rgb(255, 255, 255);
   }
