@@ -33,12 +33,16 @@ const Home = () => {
   return (
     <div className="container">
       <div className="organizadora">
-        <h1 className="filme">Novissa voadora FilmesHD</h1>
+        <h1 className="filme">Novissa Code of LoveHD</h1>
         <p className="filme2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-          iure assumenda laudantium sed <br />
-          magnam blanditiis debitis quidem, perspiciatis nihil dolorum eos sunt
-          a ex nobis{" "}
+        Em "Code of Love", acompanhamos a empolgante jornada de Emily Turner, uma designer gráfica talentosa que descobre, por acaso, o fascinante mundo da programação. Emily mergulha de cabeça nessa nova paixão.
+
+
+
+
+
+
+        
         </p>
         <a href=""></a><button className="buttonplay">Assistir</button>
         <button className="buttonfavorite">Favoritos</button>
@@ -51,9 +55,9 @@ const Home = () => {
 {/* aqui esta as categorias */}
 <div className="categorias">
   {/* As categorias eu fiz assim, porem melhor fazer com uma logica simples que faça uma pesquisa sobre o tema no search para não quebrar em outros pcs */}
-    <div className="category1"><img src={terrorimgPath} alt="imagem-filme-teror" /><a href="http://localhost:5173/search?q=Terror"></a> </div>
-    <div className="category2"><img src={biografiaimgPath} alt="imagem-filme-biografia" /><a href="http://localhost:5173/search?q=a%C3%A7%C3%A3o"></a></div>
-    <div className="category3"><img src={suspenseimgPath} alt="imagem-do-filme-suspense" /><a href="http://localhost:5173/search?q=Suspense"></a></div>
+   <div className="category1"><img src={terrorimgPath} alt="imagem-filme-teror" /><a href="http://localhost:5173/search?q=Terror">Terror</a></div>
+    <div className="category2"><img src={biografiaimgPath} alt="imagem-filme-biografia" /><a href="http://localhost:5173/search?q=Steve%20jobs">Biografia</a></div>
+    <div className="category3"><img src={suspenseimgPath} alt="imagem-do-filme-suspense" /><a href="http://localhost:5173/search?q=Suspense">Suspense</a></div>
 </div>
 
 <h2 className="title">Filmes mais assistidos:</h2>
