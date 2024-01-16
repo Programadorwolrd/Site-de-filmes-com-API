@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
 import MovieCard from "../components/MovieCard";
 import "./MoviesGrid.css";
+
+// abaixo a importação das imagens e videos utilizados
 import videoPath from "../assets/trailer.mp4";
+import terrorimgPath from "../assets/terror.png";
+import suspenseimgPath from "../assets/suspense.png";
+import biografiaimgPath from "../assets/biografia.png";
+
+
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -33,22 +40,23 @@ const Home = () => {
           magnam blanditiis debitis quidem, perspiciatis nihil dolorum eos sunt
           a ex nobis{" "}
         </p>
-        <button className="buttonplay">Assistir</button>
+        <a href=""></a><button className="buttonplay">Assistir</button>
         <button className="buttonfavorite">Favoritos</button>
       </div>
       <video className="video" width="100%" autoPlay muted loop>
         <source src={videoPath} type="video/mp4" />
       </video>
-      <h2 className="title">Categorias:</h2>
+      
 
 {/* aqui esta as categorias */}
 <div className="categorias">
-    <div className="category1"><a href="">Terror</a> </div>
-    <div className="category2"><a href="">Terror</a></div>
-    <div className="category3"><a href="">Terror</a></div>
+  {/* As categorias eu fiz assim, porem melhor fazer com uma logica simples que faça uma pesquisa sobre o tema no search para não quebrar em outros pcs */}
+    <div className="category1"><img src={terrorimgPath} alt="imagem-filme-teror" /><a href="http://localhost:5173/search?q=Terror"></a> </div>
+    <div className="category2"><img src={biografiaimgPath} alt="imagem-filme-biografia" /><a href="http://localhost:5173/search?q=a%C3%A7%C3%A3o"></a></div>
+    <div className="category3"><img src={suspenseimgPath} alt="imagem-do-filme-suspense" /><a href="http://localhost:5173/search?q=Suspense"></a></div>
 </div>
 
-
+<h2 className="title">Filmes mais assistidos:</h2>
       <div className="movies-container">
         {topMovies.length === 0 && <p>Carregando...</p>}
         {topMovies.length > 0 &&

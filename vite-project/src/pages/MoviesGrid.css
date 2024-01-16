@@ -28,9 +28,14 @@ font-size: 250%;
 }
 
 
-.buttonplay:hover,
-.buttonfavorite:hover {
+.buttonplay:hover {
     background-color: rgb(234, 2, 2);
+    color:white;
+}
+
+
+.buttonfavorite:hover{
+    background-color: rgb(0, 0, 0);
     color:white;
 }
 
@@ -64,9 +69,9 @@ font-size: 250%;
 .category1,
 .category2,
 .category3 {
+    margin-top: -50px;
     width: 30%;
-    height: 280px;
-    background-color: red;
+    height: 360px;
     border-radius: 8px;
 }
 
@@ -94,7 +99,10 @@ font-size: 250%;
     padding: 1rem;
 }
 
-
+img{
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
 
 
 
@@ -184,8 +192,8 @@ font-size: 250%;
 @media only screen and (max-width: 700px) {
 
     .organizadora {
-        width: 370px;
-        height: 200px;
+        width: 400px;
+        height:270px;
         position: absolute;
         margin-top: 8%;
         margin-left: 17%;
@@ -193,7 +201,7 @@ font-size: 250%;
 
     .buttonplay {
         position: absolute;
-        top: 69%;
+        top: 68%;
         left: 32%;
         transform: translate(-50%, -50%);
         z-index: 1;
@@ -229,6 +237,11 @@ font-size: 250%;
     .filme,
     .filme2 {
         text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
-
+    .filme {
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        font-size: 210%;
+    }
 }
