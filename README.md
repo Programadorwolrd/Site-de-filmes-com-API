@@ -6,3 +6,7 @@ Além disso, inclui uma página inicial destacando filmes em alta e oferece a op
 visualizar detalhes sobre cada filme.(Categorias em criação)
 
  Site da API: The Movie Database
+ 
+<p align="center">
+<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+</p>
