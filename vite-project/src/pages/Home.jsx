@@ -55,9 +55,9 @@ const Home = () => {
 {/* aqui esta as categorias */}
 <div className="categorias">
   {/* As categorias eu fiz assim, porem melhor fazer com uma logica simples que faça uma pesquisa sobre o tema no search para não quebrar em outros pcs */}
-   <div className="category1"><img src={terrorimgPath} alt="imagem-filme-teror" /><a href="http://localhost:5173/search?q=Terror">Terror</a></div>
-    <div className="category2"><img src={biografiaimgPath} alt="imagem-filme-biografia" /><a href="http://localhost:5173/search?q=Steve%20jobs">Biografia</a></div>
-    <div className="category3"><img src={suspenseimgPath} alt="imagem-do-filme-suspense" /><a href="http://localhost:5173/search?q=Suspense">Suspense</a></div>
+   <div className="category1"><img src={terrorimgPath} alt="imagem-filme-teror" /><a href="/search?q=Terror">Terror</a></div>
+    <div className="category2"><img src={biografiaimgPath} alt="imagem-filme-biografia" /><a href="/search?q=Steve%20jobs">Biografia</a></div>
+    <div className="category3"><img src={suspenseimgPath} alt="imagem-do-filme-suspense" /><a href="/search?q=Suspense">Suspense</a></div>
 </div>
 
 <h2 className="title">Filmes mais assistidos:</h2>
